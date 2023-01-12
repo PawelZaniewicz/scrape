@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titlepage %}
+    Książki
+{% endblock %}
+
+{% block mymenu %}
+
+<div style="width: 30% ">
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">
+        To jest lista kategorii "zeskrobana" ze strony http://books.toscrape.com/
+    </a>
+       {% for k in list_link %}
+
+        <a class="list-group-item list-group-item-action" href="{{ k.1 }}">{{ k.0 }}</a>
+
+        {% endfor %}
+
+</div>
+</div>
+{% endblock %}

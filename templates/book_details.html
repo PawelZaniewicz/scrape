@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block titlepage %}
+    Książki z kategorii >> {{ selected_category }}
+{% endblock %}
+
+{% block mybody %}
+<div class="container row pt-4">
+    {% for k in book %}
+    <div class='col-12 col-md-3 col-lg-3'>
+        <div class="card">
+            <img src="{{ k.1 }}" class="card-img-top" alt="{{ k.0 }}"/>
+            <div class="card-body">
+                <h5 class="card-title">{{ k.0 }}</h5>
+                <p class="card-text">{{ k.3 }}</p>
+                <a href="#!" class="btn btn-primary">Cena: {{ k.2 }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Książki z kategorii >> {{ selected_category }} </title>-->
+<!--    <style>-->
+<!--        a hover, link {color: #FFF; text-decoration: none;}-->
+<!--        hr {border: 1px solid #FFF;}-->
+<!--        li {margin: 10px solid #000;}-->
+
+<!--    </style>-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<nav aria-label="breadcrumb">-->
+<!--  <ol class="breadcrumb">-->
+<!--    <li class="breadcrumb-item"><a href="http://127.0.0.1:8000/workflow/scrape"> Strona główna</a></li>-->
+<!--    <li class="breadcrumb-item active" aria-current="page">{{ selected_category }}</li>-->
+<!--  </ol>-->
+<!--</nav>-->
+
+
+<!--<hr/>-->
+
+<!--<div class="container row pt-4">-->
+<!--    {% for k in book %}-->
+<!--    <div class='col-12 col-md-3 col-lg-3'>-->
+<!--        <div class="card">-->
+<!--            <img src="{{ k.1 }}" class="card-img-top" alt="{{ k.0 }}"/>-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">{{ k.0 }}</h5>-->
+<!--                <p class="card-text">{{ k.3 }}</p>-->
+<!--                <a href="#!" class="btn btn-primary">Cena: {{ k.2 }}</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
